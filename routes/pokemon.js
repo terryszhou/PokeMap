@@ -70,6 +70,5 @@ router.get('/:name', (req, res) => {
     log(err)
   })
 })
-
 // EXPORT ROUTER
 module.exports = router;

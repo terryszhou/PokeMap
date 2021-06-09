@@ -92,13 +92,13 @@ Wireframe of Route + Pokemon
 
 #### Areas of Interest
 - Cerulean Cave
-- Diglett's Cave
+<!-- - Diglett's Cave - only digletts -->
 - Mt. Moon
-- Pokemon Mansion
-- Pokemon Tower
+<!-- - Pokemon Mansion - located on Cinnabar Island -->
+<!-- - Pokemon Tower - located in Lavendar Town -->
 - Power Plant
 - Rock Tunnel
-- Safari Zone
+<!-- - Safari Zone - located near Fuchsia  City -->
 - Victory Road
 - Viridian Forest
 
