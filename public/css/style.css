@@ -5,6 +5,27 @@
     src: local('Pokemon Fire Red Regular'), url('fonts/pokemon_fire_red.woff') format('woff');
 }
 
+#gameboy-container {
+    position: relative;
+    text-align: center;
+}
+
+#gameboy {
+    position: relative;
+    width: 1250px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#map {
+    position: absolute;
+    top: 190px;
+    left: 310px;
+    width: 650px;
+    border-radius: 15px;
+}
+
+
 body {
     background-color: rgb(81,123,58);
 }

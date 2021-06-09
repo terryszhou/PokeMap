@@ -1,4 +1,4 @@
-# Project 2: Expanded Pokedex
+# Project 2: PokeMap (Expanded Pokedex)
 
 For this project, I would like to take the PokeAPI that we worked with in our deliverable and greatly expand its functionality. 
 
