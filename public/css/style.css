@@ -14,7 +14,7 @@
     position: relative;
     width: 1250px;
     border-radius: 15px;
-    text-align: center;
+
 }
 
 #map {
@@ -23,6 +23,10 @@
     left: 310px;
     width: 650px;
     border-radius: 15px;
+    box-shadow:
+    0 0 30px 10px rgb(255,255,255),
+    0 0 60px 30px rgb(150, 190, 200),
+    0 0 90px 50px rgb(75,178,167);
 }
 
 
