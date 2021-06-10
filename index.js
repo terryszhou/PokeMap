@@ -15,14 +15,30 @@ app.use(ejsLayouts);
 app.use('/pokemon', require('./routes/pokemon'));
 
 // GET / - main index of site
+// app.get('/', (req, res) => {
+//   let pokemonUrl = 'http://pokeapi.co/api/v2/pokemon/?limit=151';
+//   axios.get(pokemonUrl).then(apiResponse => {
+//     let pokemon = apiResponse.data.results;
+//     res.render('index', { pokemon: pokemon.slice(0, 151) });
+//   })
+// });
+
+// GET / - MAIN MAP
 app.get('/', (req, res) => {
-  let pokemonUrl = 'http://pokeapi.co/api/v2/pokemon/?limit=151';
-  axios.get(pokemonUrl).then(apiResponse => {
-    let pokemon = apiResponse.data.results;
-    // res.render('index', { pokemon: pokemon.slice(0, 151) });
-    res.render('map', { pokemon: pokemon.slice(0, 151) });
+  db.allplace.findAll()
+  .then((allplaces) => {
+    res.render('map', {allplaces: allplaces})
   })
-});
+  .catch(err => {
+    log(err)
+  })
+})
+
+// GET /ROUTE - VIEW ROUTE
+// app.get('/:id', (req, res) => {
+//   let name = req.params.id
+//   res.render('route.ejs')
+// })
 
 // TEST ROUTE
 // app.get('/', (req, res) => {
