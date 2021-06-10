@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      pokeId: {
+      allplaceId: {
         type: Sequelize.INTEGER
       },
-      placeId: {
+      allpokemonId: {
         type: Sequelize.INTEGER
       },
       createdAt: {

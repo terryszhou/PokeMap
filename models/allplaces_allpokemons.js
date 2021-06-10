@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   allplaces_allpokemons.init({
-    pokeId: DataTypes.INTEGER,
-    placeId: DataTypes.INTEGER
+    allplaceId: DataTypes.INTEGER,
+    allpokemonId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'allplaces_allpokemons',

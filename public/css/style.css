@@ -261,6 +261,12 @@
     left: 548px;
 }
 
+#special-event {
+    top: 100px; 
+    right: 60px;
+    opacity: 0%;
+}
+
 .map-pointer:hover {
     transform: scale(1.4) translateY(-3px);
     transition-duration: 0.3s;

@@ -207,6 +207,16 @@ module.exports = {
         name: 'viridian forest',
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        name: 'seafoam islands',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'special event',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ])
   },
