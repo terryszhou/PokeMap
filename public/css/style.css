@@ -259,6 +259,33 @@
 .map-pointer:hover {
     transform: scale(1.25) translateY(-3px);
     transition-duration: 0.3s;
+    z-index: 1;
+}
+
+#party-button {
+    position: absolute;
+    bottom: 96px;
+    left: 97px;
+}
+
+#start-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 60%;
+}
+
+#pokeball {
+    border-radius: 60%;
+    width: 75px;
+    opacity: 50%;
+    transform: rotate(0deg);
+    transition-duration: 0.3s;
+}
+
+#pokeball:hover {
+    opacity: 100%;
+    transform: rotate(360deg) scale(1.4);
+    transition-duration: 0.3s;
 }
 
 body {

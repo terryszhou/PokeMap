@@ -35,26 +35,16 @@ app.get('/:id', (req, res) => {
   })
   .then((oneplace) => {
     res.render('route.ejs', {oneplace: oneplace})
+    log(oneplace)
   })
   .catch(err => {
     log(err)
   })
 })
 
-// TEST ROUTE
-// app.get('/', (req, res) => {
-//   let testUrl = 'https://pokeapi.co/api/v2/location-area/296/'
-//   axios.get(testUrl).then(apiResponse => {
-//     let results = apiResponse.data
-//     console.log(results.pokemon_encounters.length)
-//   })
-// })
-
 app.listen(port, () => {
   console.log('...listening on', port );
 });
-
-
 
 // SCRAP CODE
 
