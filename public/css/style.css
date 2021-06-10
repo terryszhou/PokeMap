@@ -256,8 +256,13 @@
     left: 376px;
 }
 
+#seafoam-islands {
+    bottom: 134px;
+    left: 548px;
+}
+
 .map-pointer:hover {
-    transform: scale(1.25) translateY(-3px);
+    transform: scale(1.4) translateY(-3px);
     transition-duration: 0.3s;
     z-index: 1;
 }
