@@ -45,6 +45,221 @@
     0 0 90px 50px rgb(75,178,167);
 }
 
+.map-pointer {
+    position: absolute;
+    width: 30px;
+    transition-duration: 0.3s;
+}
+
+#pallet-town {
+    bottom: 255px;
+    left: 455px;
+}
+
+#route-1 {
+    bottom: 305px;
+    left: 455px;
+}
+
+#viridian-city {
+    bottom: 345px;
+    left: 455px;
+}
+
+#route-2 {
+    bottom: 385px;
+    left: 455px;
+}
+
+#viridian-forest {
+    bottom: 415px;
+    left: 452px;
+}
+
+#pewter-city {
+    bottom: 455px;
+    left: 455px;
+}
+
+#route-3 {
+    bottom: 463px;
+    left: 532px;
+}
+
+#mt-moon {
+    bottom: 492px;
+    left: 596px;
+}
+
+#route-4 {
+    bottom: 480px;
+    left: 655px;
+}
+
+#cerulean-cave {
+    bottom: 485px;
+    left: 675px;
+}
+
+#cerulean-city {
+    bottom: 477px;
+    left: 722px;
+}
+
+#route-5 {
+    bottom: 450px;
+    left: 722px;
+}
+
+#route-24 {
+    bottom: 510px;
+    left: 722px;
+}
+
+#route-25 {
+    bottom: 535px;
+    left: 760px;
+}
+
+#route-9 {
+    bottom: 480px;
+    left: 800px;
+}
+
+#rock-tunnel {
+    bottom: 480px;
+    left: 866px;
+}
+
+#power-plant {
+    bottom: 455px;
+    left: 866px;
+}
+
+#route-10 {
+    bottom: 430px;
+    left: 866px;
+}
+
+#lavender-town {
+    bottom: 395px;
+    left: 866px;
+}
+
+#route-8 {
+    bottom: 400px;
+    left: 788px;
+}
+
+#saffron-city {
+    bottom: 400px;
+    left: 721px;
+}
+
+#route-6 {
+    bottom: 370px;
+    left: 721px;
+}
+
+#vermilion-city {
+    bottom: 310px;
+    left: 721px;
+}
+
+#route-7 {
+    bottom: 400px;
+    left: 682px;
+}
+
+#route-11 {
+    bottom: 310px;
+    left: 813px;
+}
+
+#route-12 {
+    bottom: 350px;
+    left: 885px;
+}
+
+#celadon-city {
+    bottom: 415px;
+    left: 607px;
+}
+
+#route-16 {
+    bottom: 418px;
+    left: 560px;
+}
+
+#route-17 {
+    bottom: 339px;
+    left: 529px;
+}
+
+#route-18 {
+    bottom: 197px;
+    left: 577px;
+}
+
+#fuchsia-city {
+    bottom: 197px;
+    left: 621px;
+}
+
+#route-15 {
+    bottom: 197px;
+    left: 675px;
+}
+
+#route-14 {
+    bottom: 213px;
+    left: 757px;
+}
+
+#route-13 {
+    bottom: 243px;
+    left: 819px;
+}
+
+#route-19 {
+    bottom: 170px;
+    left: 622px;
+}
+
+#route-20 {
+    bottom: 135px;
+    left: 590px;
+}
+
+#cinnabar-island {
+    bottom: 140px;
+    left: 443px;
+}
+
+#route-21 {
+    bottom: 190px;
+    left: 443px;
+}
+
+#route-22 {
+    bottom: 350px;
+    left: 403px;
+}
+
+#route-23 {
+    bottom: 388px;
+    left: 376px;
+}
+
+#victory-road {
+    bottom: 455px;
+    left: 376px;
+}
+
+.map-pointer:hover {
+    transform: scale(1.25) translateY(-3px);
+    transition-duration: 0.3s;
+}
 
 body {
     background-color: rgb(81,123,58);
