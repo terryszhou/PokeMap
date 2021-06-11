@@ -1,5 +1,6 @@
-<div class="container my-container">
-    <h3 class="a text-center route-name">
+<%# ------------- HTML -------------%>
+<main>
+    <h3 class="a">
         <%= oneplace.dataValues.name %>
     </h3>
     <p>
@@ -7,6 +8,118 @@
           <button class="btn btn-primary" type="submit">Back to Map</button>
         </form>
     </p>
+
+<%# ------------- POKEMON LIST ------------- %>
+    <table class="data-table">
+        <tbody>
+            <tr>
+                <td class="data-text">
+                    Picture
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <% if (oneplace.dataValues.name == 'route 1') { %>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/1b/Kanto_Route_1_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 2') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/c/c0/Kanto_Route_2_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 3') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/8/83/Kanto_Route_3_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 4') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/b/b5/Kanto_Route_4_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 5') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/c/c4/Kanto_Route_5_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 6') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/e/ec/Kanto_Route_6_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 7') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/5/58/Kanto_Route_7_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 8') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/f/f1/Kanto_Route_8_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 9') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/a/ab/Kanto_Route_9_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 10') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/2/28/Kanto_Route_10_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 11') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/c/c3/Kanto_Route_11_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 12') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/b/b6/Kanto_Route_12_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 13') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/e/e8/Kanto_Route_13_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 14') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/5/5b/Kanto_Route_14_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 15') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/b/b5/Kanto_Route_15_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 16') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/f/f6/Kanto_Route_16_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 17') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/d/de/Kanto_Route_17_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 18') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/7/7a/Kanto_Route_18_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 19') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/1c/Kanto_Route_19_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 20') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/14/Kanto_Route_20_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 21') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/9/93/Kanto_Route_21_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 22') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/0/0d/Kanto_Route_22_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 23') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/b/b9/Kanto_Route_23_FRLG.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 24') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/e/e9/Kanto_Route_24_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'route 25') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/7/76/Kanto_Route_25_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'pallet town') {%>
+                        <h5 class="italic">"Shades of Your Journey Await!"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/7/7b/Pallet_Town_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'viridian city') {%>
+                        <h5 class="italic">"The City of Evergreen"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/b/bd/Viridian_City_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'pewter city') {%>
+                        <h5 class="italic">"Between Rugged Mountains"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/a/ac/Pewter_City_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'cerulean city') {%>
+                        <h5 class="italic">"The Floral Lagoon City"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/8/8f/Cerulean_City_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'vermilion city') {%>
+                        <h5 class="italic">"The Port of Exquisite Sunsets"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/4/43/Vermilion_City_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'lavender town') {%>
+                        <h5 class="italic">"The Noble Town"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/5/5e/Lavender_Town_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'celadon city') {%>
+                        <h5 class="italic">"City of Rainbow Dreams"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/b/bb/Celadon_City_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'fuchsia city') {%>
+                        <h5 class="italic">"Happening and Passing City"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/5/59/Fuchsia_City_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'saffron city') {%>
+                        <h5 class="italic">"Shining Big City"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/1e/Saffron_City_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'cinnabar island') {%>
+                        <h5 class="italic">"The Ravaged Town of the Past"</h5>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/15/Cinnabar_Island_HGSS.png"/>
+                    <% } else if (oneplace.dataValues.name == 'cerulean cave') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/7/7e/HGSS_Cerulean_Cave-Morning.png"/>
+                    <% } else if (oneplace.dataValues.name == 'mt moon') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/b/bc/HGSS_Mt._Moon-Day.png"/>
+                    <% } else if (oneplace.dataValues.name == 'power plant') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/9/99/FL_Power_Plant.png"/>
+                    <% } else if (oneplace.dataValues.name == 'rock tunnel') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/1d/HGSS_Rock_Tunnel-Day.png"/>
+                    <% } else if (oneplace.dataValues.name == 'victory road') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/5/5a/HGSS_Victory_Road-Day.png"/>
+                    <% } else if (oneplace.dataValues.name == 'seafoam islands') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/1b/HGSS_Seafoam_Islands-Day.png"/>
+                    <% } else if (oneplace.dataValues.name == 'special event') {%>
+                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/5/5a/HGSS_Victory_Road-Day.png"/>
+                    <% } %>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+<%# ------------- POKEMON LIST ------------- %>
     <% placeMons.forEach(mon => { %>
         <div class="well">
             <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= mon.id %>.png">
@@ -19,7 +132,6 @@
             </form>
         </div>
     <% }) %>
-</div>
-
+</main>
 
 

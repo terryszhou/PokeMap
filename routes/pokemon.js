@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
     dexnum: parseInt(req.body.dexnum)
   })
   .then((post) => {
-    res.redirect('/')
+    res.redirect('/pokemon')
   })
   .catch((err) => {
     log(err)

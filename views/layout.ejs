@@ -11,11 +11,34 @@
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
   <body>
+    <!-- <div id="sidebar">
+
+    </div>
+    <div id="main">
+      <button id="start-button" onclick="controlNav()">
+        <img id="pokeball" src="img/pokeball.png">
+      </button>
+    </div> -->
     <%- body %>
+
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- <script>
+      function controlNav() {
+        let sidebar = document.getElementById('sidebar')
+        let main = document.getElementById('main')
+        let startButton = document.getElementById('start-button')
+        if (sidebar.style.width == '250px' && main.style.marginLeft == '250px') {
+          sidebar.style.width = 0
+          main.style.marginLeft = 0
+        } else {
+          sidebar.style.width = '250px'
+          main.style.marginLeft = '250px'
+        }
+      }
+    </script> -->
   </body>
 </html>

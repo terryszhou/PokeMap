@@ -5,6 +5,23 @@
     src: local('Pokemon Fire Red Regular'), url('fonts/pokemon_fire_red.woff') format('woff');
 }
 
+#sidebar {
+    z-index: 1;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: black;
+    overflow-x: hidden;
+    transition-duration: 0.5s;
+    white-space: nowrap;
+}
+
+#main {
+    transition: margin-left 0.5s;
+}
+
 #map-body {
     background-color: black;
 }
@@ -286,6 +303,10 @@
 }
 
 #pokeball {
+    /* z-index: 1;
+    position: absolute;
+    top: 100px;
+    left: 50px; */
     border-radius: 60%;
     width: 75px;
     opacity: 50%;
@@ -379,6 +400,10 @@ h6 {
     text-transform: capitalize;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .detail {
     text-align: center;
 }
@@ -388,12 +413,20 @@ h6 {
 }
 
 .detail-img {
-    margin: 10px;
     max-width: 250px;
+    margin: 10px;
     background-color: rgb(78,78,78);
     border-radius: 25%;
     border: 1px solid rgb(36,36,36);
 }
+
+.place-img {
+    max-width: 40%;
+    max-height: 40%;
+    margin: 10px;
+    border-radius: 15px;
+}
+
 
 .home-sprite {
     background-color: rgb(56,56,56);
