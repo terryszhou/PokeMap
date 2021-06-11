@@ -102,9 +102,9 @@ async function route4() {
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
+          {name: 'seaking'},
           {name: 'psyduck'},
-          {name: 'krabby'},
-          {name: 'seaking'}
+          {name: 'krabby'}
         ]
       }
     })
@@ -174,7 +174,6 @@ async function route6() {
           {name: 'shellder'},
           {name: 'krabby'},
           {name: 'machamp'}
-
         ]
       }
     })
@@ -273,7 +272,7 @@ async function route9() {
           {name: 'nidoran-f'},
           {name: 'nidorina'},
           {name: 'nidoran-m'},
-          {name: 'nidorino'},
+          {name: 'nidorino'}
         ]
       }
     })
@@ -307,12 +306,12 @@ async function route10() {
           {name: 'voltorb'},
           {name: 'magikarp'},
           {name: 'poliwag'},
-          {name: 'goldeen'},
           {name: 'poliwhirl'},
+          {name: 'goldeen'},
           {name: 'slowpoke'},
           {name: 'krabby'},
           {name: 'kingler'},
-          {name: 'horsea'},
+          {name: 'horsea'}
         ]
       }
     })
@@ -605,13 +604,13 @@ async function route19() {
     const route19Mons = await db.allpokemon.findAll({
       where: {
         [Op.or]:[
-          {name: 'tentacool'},
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
-          {name: 'tentacruel'},
           {name: 'shellder'},
           {name: 'horsea'},
+          {name: 'tentacool'},
+          {name: 'tentacruel'},
           {name: 'staryu'},
           {name: 'starmie'}
         ]
@@ -635,13 +634,13 @@ async function route20() {
     const route20Mons = await db.allpokemon.findAll({
       where: {
         [Op.or]:[
-          {name: 'tentacool'},
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
-          {name: 'tentacruel'},
           {name: 'shellder'},
           {name: 'horsea'},
+          {name: 'tentacool'},
+          {name: 'tentacruel'},
           {name: 'staryu'}
         ]
       }
@@ -671,13 +670,13 @@ async function route21() {
           {name: 'tangela'},
           {name: 'vileplume'},
           {name: 'victreebel'},
-          {name: 'tentacool'},
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
-          {name: 'tentacruel'},
           {name: 'shellder'},
           {name: 'horsea'},
+          {name: 'tentacool'},
+          {name: 'tentacruel'},
           {name: 'staryu'},
           {name: 'starmie'}
         ]
@@ -708,8 +707,8 @@ async function route22() {
           {name: 'mankey'},
           {name: 'magikarp'},
           {name: 'poliwag'},
-          {name: 'goldeen'},
-          {name: 'poliwhirl'}
+          {name: 'poliwhirl'},
+          {name: 'goldeen'}
         ]
       }
     })
@@ -747,12 +746,12 @@ async function route23() {
           {name: 'ditto'},
           {name: 'magikarp'},
           {name: 'poliwag'},
-          {name: 'goldeen'},
           {name: 'poliwhirl'},
+          {name: 'goldeen'},
+          {name: 'seaking'},
           {name: 'slowbro'},
           {name: 'kingler'},
           {name: 'seadra'},
-          {name: 'seaking'},
           {name: 'dragonite'}
         ]
       }
@@ -789,9 +788,9 @@ async function route24() {
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
+          {name: 'seaking'},
           {name: 'psyduck'},
           {name: 'krabby'},
-          {name: 'seaking'},
           {name: 'dragonite'},
           {name: 'charmander'}
         ]
@@ -939,9 +938,9 @@ async function ceruleanCity() {
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
+          {name: 'seaking'},
           {name: 'psyduck'},
           {name: 'krabby'},
-          {name: 'seaking'},
           {name: 'bulbasaur'},
           {name: 'jynx'},
           {name: 'gengar'}
@@ -1030,8 +1029,8 @@ async function celadonCity() {
           {name: 'jolteon'},
           {name: 'flareon'},
           {name: 'poliwag'},
-          {name: 'goldeen'},
           {name: 'poliwhirl'},
+          {name: 'goldeen'},
           {name: 'slowpoke'}
         ]
       }
@@ -1057,8 +1056,8 @@ async function fuchsiaCity() {
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
-          {name: 'krabby'},
           {name: 'seaking'},
+          {name: 'krabby'},
           {name: 'gyarados'},
           {name: 'nidoran-f'},
           {name: 'nidorina'},
@@ -1196,10 +1195,10 @@ async function ceruleanCave() {
           {name: 'magikarp'},
           {name: 'poliwag'},
           {name: 'goldeen'},
+          {name: 'seaking'},
           {name: 'slowbro'},
           {name: 'kingler'},
           {name: 'seadra'},
-          {name: 'seaking'},
           {name: 'poliwrath'},
           {name: 'golduck'},
           {name: 'mewtwo'}
@@ -1421,50 +1420,49 @@ async function specialEvent() {
   }
 }
 
-
-// route1()
-// route2()
-// route3()
-// route4()
-// route5()
-// route6()
-// route7()
-// route8()
-// route9()
-// route10()
-// route11()
-// route12()
-// route13()
-// route14()
-// route15()
-// route16()
-// route17()
-// route18()
-// route19()
-// route20()
-// route21()
-// route22()
-// route23()
-// route24()
-// route25()
-// palletTown()
-// viridianCity()
-// pewterCity()
-// ceruleanCity()
-// vermilionCity()
-// lavenderTown()
-// celadonCity()
-// fuchsiaCity()
-// saffronCity()
-// cinnabarIsland()
-// ceruleanCave()
-// mtMoon()
-// powerPlant()
-// rockTunnel()
-// victoryRoad()
-// viridianForest()
-// seafoamIslands()
-// specialEvent()
+route1()
+route2()
+route3()
+route4()
+route5()
+route6()
+route7()
+route8()
+route9()
+route10()
+route11()
+route12()
+route13()
+route14()
+route15()
+route16()
+route17()
+route18()
+route19()
+route20()
+route21()
+route22()
+route23()
+route24()
+route25()
+palletTown()
+viridianCity()
+pewterCity()
+ceruleanCity()
+vermilionCity()
+lavenderTown()
+celadonCity()
+fuchsiaCity()
+saffronCity()
+cinnabarIsland()
+ceruleanCave()
+mtMoon()
+powerPlant()
+rockTunnel()
+victoryRoad()
+viridianForest()
+seafoamIslands()
+specialEvent()
 
 
 
