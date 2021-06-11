@@ -268,7 +268,7 @@
 }
 
 .map-pointer:hover {
-    transform: scale(1.4) translateY(-3px);
+    transform: scale(1.4) translateY(-3.5px);
     transition-duration: 0.3s;
     z-index: 1;
 }
