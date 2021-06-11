@@ -1,7 +1,25 @@
-<main>
+<div class="container my-container">
     <h3 class="a text-center route-name">
         <%= oneplace.dataValues.name %>
     </h3>
-</main>
+    <p>
+        <form class="text-center" action="/">
+          <button class="btn btn-primary" type="submit">Back to Map</button>
+        </form>
+    </p>
+    <% placeMons.forEach(mon => { %>
+        <div class="well">
+            <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= mon.id %>.png">
+            <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/<%= mon.id %>.png">
+            <h2 class="a">#<%= mon.id %> <%= mon.name %></h2>
+            <form method="POST" action="/pokemon">
+                <input hidden type="text" name="name" value="<%= mon.name %>">
+                <input hidden type="integer" name="dexnum" value="<%= mon.id %>">
+                <button class="btn btn-primary" type="submit">Add to Party</button>
+            </form>
+        </div>
+    <% }) %>
+</div>
+
 
 

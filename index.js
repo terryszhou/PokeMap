@@ -9,7 +9,7 @@ const log = console.log
 const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public/'))
 app.use(methodOverride("_method"))
 app.use(ejsLayouts);
@@ -26,16 +26,15 @@ app.get('/', (req, res) => {
   })
 })
 
-// GET /ROUTE - VIEW ROUTE
+// GET / - PLACE WITH POKEMON
 app.get('/:id', (req, res) => {
   db.allplace.findOne({
-    where: {
-      id: req.params.id
-    }
+    where: { id: req.params.id },
+    include: [db.allpokemon]
   })
   .then((oneplace) => {
-    res.render('route.ejs', {oneplace: oneplace})
-    log(oneplace)
+    const placeMons = oneplace.allpokemons
+    res.render('route.ejs', {oneplace: oneplace, placeMons: placeMons})
   })
   .catch(err => {
     log(err)
@@ -43,18 +42,11 @@ app.get('/:id', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log('...listening on', port );
+  log('...listening on', port );
 });
 
 // SCRAP CODE
 
-// TEST LOGS FOR ACCESSING ALLPLACES INFO
-// allplaces.forEach((e) => {
-//   log(e.dataValues.id)
-// })
-// log(allplaces[0].dataValues.id)
-
-    
 // GET / - show main pokedex
 // app.get('/', (req, res) => {
 //   let pokemonUrl = 'http://pokeapi.co/api/v2/pokemon/?limit=151';
@@ -63,3 +55,17 @@ app.listen(port, () => {
 //     res.render('index', { pokemon: pokemon.slice(0, 151) });
 //   })
 // });
+
+// GET /ROUTE - VIEW ROUTE
+// app.get('/:id', (req, res) => {
+//   db.allplace.findOne({
+//     where: { id: req.params.id }
+//   })
+//   .then((oneplace) => {
+//     res.render('route.ejs', {oneplace: oneplace})
+//   })
+//   .catch(err => {
+//     log(err)
+//   })
+// })
+
