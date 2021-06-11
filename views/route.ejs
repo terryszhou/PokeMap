@@ -112,7 +112,7 @@
                     <% } else if (oneplace.dataValues.name == 'seafoam islands') {%>
                         <img class="place-img" src="https://cdn2.bulbagarden.net/upload/1/1b/HGSS_Seafoam_Islands-Day.png"/>
                     <% } else if (oneplace.dataValues.name == 'special event') {%>
-                        <img class="place-img" src="https://cdn2.bulbagarden.net/upload/5/5a/HGSS_Victory_Road-Day.png"/>
+                        <img class="place-img" src="https://i.imgur.com/6sYxOAI.jpg"/>
                     <% } %>
                 </td>
             </tr>
@@ -120,6 +120,17 @@
     </table>
 
 <%# ------------- POKEMON LIST ------------- %>
+<table class='data-table'>
+    <tbody>
+        <tr>
+            <td class="data-text">
+                Pokemon
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="poke-box">
     <% placeMons.forEach(mon => { %>
         <div class="well">
             <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= mon.id %>.png">
@@ -132,6 +143,24 @@
             </form>
         </div>
     <% }) %>
+</div>
+
 </main>
+<script>
+    // let placeImgArray = []
+    // let placeImg = document.querySelectorAll('.place-img')
+    // placeImgArray.push(placeImg)
+
+    // placeImgArray[0].forEach(place => {
+    //     if (place.width > place.height) {
+    //         place.style.width = "50%"
+    //         place.style.height = "50%"
+    //     } else if (place.height > place.width) {
+    //         place.style.width = "30%"
+    //         place.style.height = "30%"
+    //     }
+    // })
+    
+</script>
 
 

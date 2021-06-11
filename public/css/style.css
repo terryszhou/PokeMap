@@ -343,10 +343,17 @@ body {
     color: white;
 }
 
+.poke-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .well {
     background-color: rgb(64,64,64);
-    border-radius: 25px;
     border: none;
+    border-radius: 15px;
+    margin-left: 10px;
+    text-align: center;
 }
 
 .favorite-button {
@@ -422,7 +429,6 @@ h6 {
 
 .place-img {
     max-width: 40%;
-    max-height: 40%;
     margin: 10px;
     border-radius: 15px;
 }
