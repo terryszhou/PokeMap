@@ -437,6 +437,7 @@ h6 {
 .home-sprite {
     background-color: rgb(56,56,56);
     border-radius: 25%;
+    /* width: 80px; */
 }
 
 li {
