@@ -1,7 +1,7 @@
 <%# ------------- HTML -------------%>
 <main>
     <h3 class="a"><%= oneplace.dataValues.name %></h3>
-    <h5 class="italic goldtext"><%= oneplace.dataValues.kanji %></h5>
+    <h5 class="italic gold-text"><%= oneplace.dataValues.kanji %></h5>
     <p>
         <form class="text-center" action="/">
           <button class="btn btn-primary" type="submit">Back to Map</button>
@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td>
-                    <h5 class="italic goldtext"><%= oneplace.dataValues.flavortext %></h5>
+                    <h5 class="italic gold-text"><%= oneplace.dataValues.flavortext %></h5>
                     <img class="place-img" src="img/place-img/<%= oneplace.dataValues.id %>.png">
                 </td>
             </tr>
@@ -40,7 +40,7 @@
     <% placeMons.forEach(mon => { %>
         <div class="well">
             <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= mon.id %>.png">
-            <h2 class="a"><span class="goldtext">#<%= mon.id %></span> <%= mon.name %></h2>
+            <h2 class="a"><span class="gold-text">#<%= mon.id %></span> <%= mon.name %></h2>
             <form method="POST" action="/pokemon">
                 <input hidden type="text" name="name" value="<%= mon.name %>">
                 <input hidden type="integer" name="dexnum" value="<%= mon.id %>">

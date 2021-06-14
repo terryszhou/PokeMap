@@ -22,7 +22,7 @@ For an extended Pokedex, here are the features I would like to implement:
 
 [✓] Once a route is clicked, a new route.ejs page would appear displaying route information and all pokemon available in that route. The displayed pokemon can then be favorited as usual. Basically a simplified point-and-click Pokemon Go using real game maps.
 
-[] The ability to limit the number of Pokemon in your favorites list to 6, mimicking the party size in the games, and encouraging users to explore the app and make wise choices.
+[✓] The ability to limit the number of Pokemon in your favorites list to 6, mimicking the party size in the games, and encouraging users to explore the app and make wise choices.
 
 [✓] The ability to release party pokemon back into the wild--that is, delete them from your favorites list (and therefore from the SQL database table).
 

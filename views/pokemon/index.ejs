@@ -1,5 +1,9 @@
 <div class="container my-container">
-    <h1 class="text-center">Your Party</h1>
+        <% if (pokemons.length == 6) { %>
+            <h1 class="text-center gold-text">Party Limit Reached!</h1>
+        <% } else { %>
+            <h1 class="text-center">Your Party</h1>
+        <% } %>
     <p>
         <form class="text-center" action="/">
           <button class="btn btn-primary" type="submit">See Map</button>
