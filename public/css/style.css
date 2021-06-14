@@ -330,6 +330,7 @@ body {
     background-color: rgb(81,123,58);
     border: none;
     border-radius: 15px;
+    width: 100px;
 }
 
 .btn:hover {
@@ -343,6 +344,7 @@ body {
 .my-container {
     background-color: rgb(56,56,56);
     color: white;
+    border-radius: 15px;
 }
 
 .poke-box {
@@ -532,4 +534,21 @@ li {
 
 .sapphire:hover {
     background-color: rgb(88,129,242);
+}
+
+.text-field {
+    border-radius: 15px;
+    color: rgb(56,56,56);
+    font-size: 20px;
+}
+
+.button-box {
+    margin: 10px;
+}
+
+#nickname-container {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 500px;
 }
