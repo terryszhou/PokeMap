@@ -1,5 +1,5 @@
 <div class="container my-container">
-    <h1 class="text-center">Party</h1>
+    <h1 class="text-center">Your Party</h1>
     <p>
         <form class="text-center" action="/">
           <button class="btn btn-primary" type="submit">See Map</button>
@@ -11,8 +11,8 @@
                 <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= pokemon.dexnum %>.png" />
                     <% if (pokemon.nickname !== null && pokemon.nickname !== "") { %>
                         <h3>
-                            <span class="a"><%= pokemon.nickname %></span>
-                            <span> the</span>
+                            <span class="nickname a"><%= pokemon.nickname %></span>
+                            <span>the</span>
                             <span class="a"><%= pokemon.name %></span>
                         </h3>
                     <% } else { %>

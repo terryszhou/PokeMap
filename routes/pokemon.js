@@ -11,7 +11,10 @@ const log = console.log
 // GET /pokemon - return a page with favorited Pokemon
 router.get('/', (req, res) => {
   db.pokemon.findAll()
-  .then((pokemons) => {
+  .then((mons) => {
+    const pokemons = mons.sort(function (a, b) {
+      return a.dataValues.createdAt - b.dataValues.createdAt
+    })
     res.render('pokemon/index.ejs', { pokemons: pokemons})
   })
   .catch(err => {
@@ -96,7 +99,10 @@ router.get('/:name', (req, res) => {
     const responseTwo = responses[1]
     let pokeDataOne = responseOne.data
     let pokeDataTwo = responseTwo.data
-    res.render('pokemon/show.ejs', {pokeDataOne: pokeDataOne, pokeDataTwo: pokeDataTwo})
+    let sortedMoves = pokeDataOne.moves.sort(function (a, b) {
+      return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
+    })
+    res.render('pokemon/show.ejs', {pokeDataOne: pokeDataOne, pokeDataTwo: pokeDataTwo, sortedMoves: sortedMoves})
     })
   )
   .catch(err => {

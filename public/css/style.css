@@ -18,10 +18,6 @@
     white-space: nowrap;
 }
 
-#main {
-    transition: margin-left 0.5s;
-}
-
 #map-body {
     background-color: black;
 }
@@ -374,8 +370,9 @@ h3 {
 
 main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: -20px 50px 0 50px;
+    margin: 0 50px 0 50px;
     padding: 10px;
+    border-radius: 15px;
     background-color: rgb(56,56,56);
     color: white;
 }
@@ -551,4 +548,12 @@ li {
     top: 20%;
     left: 30%;
     width: 500px;
+}
+
+.nickname {
+    color: rgb(68,109,222);
+}
+
+.goldtext {
+    color: gold;
 }

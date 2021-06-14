@@ -2,7 +2,7 @@
 <main>
     <h3 class="a">
         <img class="detail-sprite" src="<%= pokeDataOne.sprites.versions["generation-viii"].icons.front_default %>"/>
-        #<%= pokeDataOne.id %> <%= pokeDataOne.name %>
+        <span class="goldtext">#<%= pokeDataOne.id %></span> <%= pokeDataOne.name %>
     </h3>
     <p>
         <form class="back-button" action="/pokemon">
@@ -152,7 +152,7 @@
             <tr>
                 <td class="a">
                     <% pokeDataOne.abilities.forEach((e) => { %>
-                        <p><%= e.ability.name %></p>
+                        <p><%= e.ability.name.replace(/-/g, ' ') %></p>
                     <% }) %>
                 </td>
                 <td class="a">
@@ -253,6 +253,35 @@
                     <%= pokeDataTwo.flavor_text_entries[20].flavor_text %>
                 </td>
             </tr>
+        </tbody>
+    </table>
+
+<%# ------------- MOVES TABLE -------------%>
+    <table class="data-table">
+        <tbody>
+            <tr>
+                <td class="data-text" colspan="3">
+                    Moves
+                </td>
+            </tr>
+            <tr>
+                <td class="data-text">Move Name</td>
+                <td class="data-text">Level Learned</td>
+                <td class="data-text">Learn Method</td>
+            </tr>
+            <% sortedMoves.forEach((e) => { %>
+                <tr>
+                    <td class="a">
+                        <%= e.move.name.replace(/-/g, ' ') %>
+                    </td>
+                    <td>
+                        <%= e.version_group_details[0].level_learned_at %>
+                    </td>
+                    <td class="a">
+                        <%= e.version_group_details[0].move_learn_method.name %>
+                    </td>
+                </tr>
+            <% }) %>
         </tbody>
     </table>
 
