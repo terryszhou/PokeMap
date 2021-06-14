@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   };
   pokemon.init({
     name: DataTypes.STRING,
-    dexnum: DataTypes.INTEGER
+    dexnum: DataTypes.INTEGER,
+    nickname: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'pokemon',

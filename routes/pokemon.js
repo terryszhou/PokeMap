@@ -33,6 +33,21 @@ router.post('/', (req, res) => {
   })
 });
 
+// GET /pokemon/edit/:id -- show form to nickname party pokemon
+router.get("/edit/:id", (req, res) => {
+  db.pokemon.findOne({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then((onepokemon) => {
+    res.render("pokemon/nickname.ejs", {onepokemon: onepokemon})
+  })
+  .catch(err => {
+    log(err)
+  })
+})
+
 // DELETE /pokemon - delete pokemon from favorites page
 router.delete('/', (req, res) => {
   db.pokemon.destroy({
