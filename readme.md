@@ -18,17 +18,17 @@ For an extended Pokedex, here are the features I would like to implement:
 
 ## MVP
 
-[] Redirecting the home route to a new map.ejs page. Instead of presenting a list of all possible pokemon, this page would render a map with clickable routes. 
+[✓] Redirecting the home route to a new map.ejs page. Instead of presenting a list of all possible pokemon, this page would render a map with clickable routes. 
 
-[] Once a route is clicked, a new route.ejs page would appear displaying route information and all pokemon available in that route. The displayed pokemon can then be favorited as usual. Basically a simplified point-and-click Pokemon Go using real game maps.
+[✓] Once a route is clicked, a new route.ejs page would appear displaying route information and all pokemon available in that route. The displayed pokemon can then be favorited as usual. Basically a simplified point-and-click Pokemon Go using real game maps.
 
 [] The ability to limit the number of Pokemon in your favorites list to 6, mimicking the party size in the games, and encouraging users to explore the app and make wise choices.
 
-[] The ability to release party pokemon back into the wild--that is, delete them from your favorites list (and therefore from the SQL database table).
+[✓] The ability to release party pokemon back into the wild--that is, delete them from your favorites list (and therefore from the SQL database table).
 
 [] The ability to nickname Pokemon.
 
-[] Modified 'pokemons' table with a dexnum column for each favorited pokemon, allowing me to access much more data from the PokeAPI and display it in my .ejs files.
+[✓] Modified 'pokemons' table with a dexnum column for each favorited pokemon, allowing me to access much more data from the PokeAPI and display it in my .ejs files.
 
 ## STRETCH GOALS
 
@@ -92,13 +92,9 @@ Wireframe of Route + Pokemon
 
 #### Areas of Interest
 - Cerulean Cave
-<!-- - Diglett's Cave - only digletts -->
 - Mt. Moon
-<!-- - Pokemon Mansion - located on Cinnabar Island -->
-<!-- - Pokemon Tower - located in Lavendar Town -->
 - Power Plant
 - Rock Tunnel
-<!-- - Safari Zone - located near Fuchsia  City -->
 - Victory Road
 - Viridian Forest
 

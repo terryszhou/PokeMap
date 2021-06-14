@@ -5,7 +5,7 @@ module.exports = {
     await queryInterface.bulkInsert('allplaces', [
       {
         name: 'route 1',
-        kanji: '１番道路',
+        kanji: '1番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -59,61 +59,61 @@ module.exports = {
       },
       {
         name: 'route 10',
-        kanji: '１0番道路',
+        kanji: '10番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 11',
-        kanji: '１1番道路',
+        kanji: '11番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 12',
-        kanji: '１2番道路',
+        kanji: '12番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 13',
-        kanji: '１3番道路',
+        kanji: '13番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 14',
-        kanji: '１4番道路',
+        kanji: '14番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 15',
-        kanji: '１5番道路',
+        kanji: '15番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 16',
-        kanji: '１6番道路',
+        kanji: '16番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 17',
-        kanji: '１7番道路',
+        kanji: '17番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 18',
-        kanji: '１8番道路',
+        kanji: '18番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'route 19',
-        kanji: '１9番道路',
+        kanji: '19番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -125,7 +125,7 @@ module.exports = {
       },
       {
         name: 'route 21',
-        kanji: '2１番道路',
+        kanji: '21番道路',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -205,14 +205,14 @@ module.exports = {
       {
         name: 'fuchsia city',
         flavortext:'Happening and Passing City',
-        kanji: 'タマムシシティ Tamamushi City',
+        kanji: 'セキチクシティ Sekichiku City',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'saffron city',
         flavortext: 'Shining Big City',
-        kanji: 'セキチクシティ Sekichiku City',
+        kanji: 'ヤマブキシティ Yamabuki City',
         createdAt: new Date(),
         updatedAt: new Date()
       },

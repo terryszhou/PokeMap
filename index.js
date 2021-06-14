@@ -1,13 +1,12 @@
+// MODULE SETUP -------------------
 const express = require('express');
 const axios = require('axios'); 
 const ejsLayouts = require('express-ejs-layouts');
 const methodOverride = require("method-override");
 const db = require('./models');
-
 const app = express();
-const log = console.log
-const port = process.env.PORT || 3000;
 
+// MIDDLEWARE -------------------
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public/'))
@@ -15,6 +14,11 @@ app.use(methodOverride("_method"))
 app.use(ejsLayouts);
 app.use('/pokemon', require('./routes/pokemon'));
 
+// OPT. VARIABLES -------------------
+const log = console.log
+const port = process.env.PORT || 3000;
+
+// ROUTES -------------------
 // GET / - MAIN MAP
 app.get('/', (req, res) => {
   db.allplace.findAll()
@@ -33,7 +37,9 @@ app.get('/:id', (req, res) => {
     include: [db.allpokemon]
   })
   .then((oneplace) => {
-    const placeMons = oneplace.allpokemons
+    const placeMons = oneplace.allpokemons.sort(function(a, b) {
+      return a.dataValues.id - b.dataValues.id
+    })
     res.render('route.ejs', {oneplace: oneplace, placeMons: placeMons})
   })
   .catch(err => {
@@ -41,12 +47,12 @@ app.get('/:id', (req, res) => {
   })
 })
 
+// LISTEN TO PORT -------------------
 app.listen(port, () => {
   log('...listening on', port );
 });
 
-// SCRAP CODE
-
+// SCRAP CODE -------------------
 // GET / - show main pokedex
 // app.get('/', (req, res) => {
 //   let pokemonUrl = 'http://pokeapi.co/api/v2/pokemon/?limit=151';
