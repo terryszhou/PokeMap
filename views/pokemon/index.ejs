@@ -9,9 +9,15 @@
         <% pokemons.forEach((pokemon) => { %>
             <div class="well">
                 <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= pokemon.dexnum %>.png" />
-                <h2 class="a">
-                    <%= pokemon.name %>
-                </h2>
+                    <% if (pokemon.nickname !== null && pokemon.nickname !== "") { %>
+                        <h3>
+                            <span class="a"><%= pokemon.nickname %></span>
+                            <span> the</span>
+                            <span class="a"><%= pokemon.name %></span>
+                        </h3>
+                    <% } else { %>
+                        <h3 class="a"><%= pokemon.name %></h3>
+                    <% } %>
                 <form class="margin-bottom" action="/pokemon/<%= pokemon.name %>">
                     <input class="a btn btn-primary" type="submit" value="Details"/>
                     <input hidden type="integer" name="id" value="<%= pokemon.id %>">

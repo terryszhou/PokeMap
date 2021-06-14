@@ -1,1 +1,5 @@
-<h1>Hello</h1>
+<h1>What would you like to call your <%= onepokemon.name %>?</h1>
+<form method="POST" action="/pokemon/<%= onepokemon.id %>/?_method=PUT">
+    <input class="text-field" type="text" value="<%= onepokemon.nickname %>" name="nickname"/>
+    <input class="submit-button" type="submit" value="CHANGE!"/>
+</form>
