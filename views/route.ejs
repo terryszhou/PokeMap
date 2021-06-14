@@ -1,8 +1,7 @@
 <%# ------------- HTML -------------%>
 <main>
-    <h3 class="a">
-        <%= oneplace.dataValues.name %>
-    </h3>
+    <h3 class="a"><%= oneplace.dataValues.name %></h3>
+    <h5 class="italic"><%= oneplace.dataValues.kanji %></h5>
     <p>
         <form class="text-center" action="/">
           <button class="btn btn-primary" type="submit">Back to Map</button>
@@ -19,7 +18,7 @@
             </tr>
             <tr>
                 <td>
-                    <h5 class="italic">"<%= oneplace.dataValues.flavortext %>"</h5>
+                    <h5 class="italic"><%= oneplace.dataValues.flavortext %></h5>
                     <img class="place-img" src="img/place-img/<%= oneplace.dataValues.id %>.png">
                 </td>
             </tr>
@@ -27,7 +26,7 @@
     </table>
 
 <%# ------------- POKEMON LIST ------------- %>
-<table class='data-table'>
+<table class="data-table">
     <tbody>
         <tr>
             <td class="data-text">
@@ -41,7 +40,6 @@
     <% placeMons.forEach(mon => { %>
         <div class="well">
             <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= mon.id %>.png">
-            <!-- <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/<%= mon.id %>.gif"/> -->
             <h2 class="a">#<%= mon.id %> <%= mon.name %></h2>
             <form method="POST" action="/pokemon">
                 <input hidden type="text" name="name" value="<%= mon.name %>">
@@ -54,7 +52,14 @@
 
 </main>
 <script>
-    
+
+// let placeImg = document.querySelector(".place-img")
+// if (placeImg.width > placeImg.height) {
+//     placeImg.style.width = '700px';
+// } else if (placeImg.height > placeImg.width) {
+//     placeImg.style.width = '300px';
+// }
+
 </script>
 
 
