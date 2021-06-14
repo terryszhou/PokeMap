@@ -26,7 +26,7 @@ For an extended Pokedex, here are the features I would like to implement:
 
 [✓] The ability to release party pokemon back into the wild--that is, delete them from your favorites list (and therefore from the SQL database table).
 
-[] The ability to nickname Pokemon.
+[✓] The ability to nickname Pokemon.
 
 [✓] Modified 'pokemons' table with a dexnum column for each favorited pokemon, allowing me to access much more data from the PokeAPI and display it in my .ejs files.
 

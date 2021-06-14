@@ -7,8 +7,12 @@
         <form class="text-center" method="POST" action="/pokemon/<%= onepokemon.id %>/?_method=PUT">
             <input class="text-center text-field" type="text" value="<%= onepokemon.nickname %>" name="nickname"/>
             <div class="button-box">
-                <button class="sapphire btn btn-primary" type="submit">Rename!</button>
+                <button class="sapphire btn btn-primary" type="submit">Rename</button>
             </div>
+        </form>
+        <form class="text-center" method="POST" action="/pokemon/<%= onepokemon.id %>/?_method=PUT">
+            <input class="hidden" type="text" value="" name="nickname"/>
+            <button class="ruby btn btn-primary" type="submit">Reset</button>
         </form>
     </div>
 </div>

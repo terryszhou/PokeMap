@@ -24,9 +24,13 @@ router.get('/', (req, res) => {
 
 // POST /pokemon - receive the name of a pokemon and add it to the database
 router.post('/', (req, res) => {
-  db.pokemon.create({
-    name: req.body.name,
-    dexnum: parseInt(req.body.dexnum)
+  db.pokemon.count().then(c => {
+    if (c < 6) {
+      db.pokemon.create({
+        name: req.body.name,
+        dexnum: parseInt(req.body.dexnum)
+      })
+    } 
   })
   .then((post) => {
     res.redirect('/pokemon')
@@ -95,19 +99,37 @@ router.get('/:name', (req, res) => {
   const requestTwo = axios.get(two)
 
   axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
+
     const responseOne = responses[0]
     const responseTwo = responses[1]
+
     let pokeDataOne = responseOne.data
     let pokeDataTwo = responseTwo.data
-    let sortedMoves = pokeDataOne.moves.sort(function (a, b) {
+
+    let sortedMoves = pokeDataOne.moves.sort((a, b) => {
       return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
     })
-    res.render('pokemon/show.ejs', {pokeDataOne: pokeDataOne, pokeDataTwo: pokeDataTwo, sortedMoves: sortedMoves})
+
+    res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves})
     })
   )
   .catch(err => {
     log(err)
   })
 })
+
 // EXPORT ROUTER
 module.exports = router;
+
+// SCRAP CODE
+
+// ATTEMPTED LAYERED API CALL
+// let moveData = sortedMoves.forEach(e => {
+//   axios.get(e.move.url)
+//   .then(moves => {
+//     return moves.data
+//   })
+//   .catch(err => {
+//     log(err)
+//   })
+// })

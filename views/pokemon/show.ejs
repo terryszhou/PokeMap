@@ -117,7 +117,7 @@
                     <% } %>
                 </td>
                 <td class="a">
-                    <%= pokeDataTwo.habitat.name %>
+                    <%= pokeDataTwo.habitat.name.replace(/-/g, ' ') %>
                 </td>
             </tr>
         </tbody>
@@ -275,10 +275,10 @@
                         <%= e.move.name.replace(/-/g, ' ') %>
                     </td>
                     <td>
-                        <%= e.version_group_details[0].level_learned_at %>
+                        <%= (' ' + e.version_group_details[0].level_learned_at).replace(/ 0/g, '--') %>
                     </td>
                     <td class="a">
-                        <%= e.version_group_details[0].move_learn_method.name %>
+                        <%= e.version_group_details[0].move_learn_method.name.replace(/-/g, ' ') %>
                     </td>
                 </tr>
             <% }) %>

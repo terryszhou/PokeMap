@@ -33,17 +33,12 @@
     border-radius: 15px;
 }
 
-#welcome {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(34,47,105);
-    text-transform: uppercase;
+#pokemap-logo {
     position: absolute;
     z-index: 1;
-    left: 480px;
-    border: 5px solid rgb(34,47,105);
-    border-radius: 25px;
-    width: 300px;
-    top: -15px;
+    left: 30px;
+    top: 5px;
+    width: 250px;
 }
 
 #map {
