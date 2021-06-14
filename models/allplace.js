@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   allplace.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    flavortext: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'allplace',

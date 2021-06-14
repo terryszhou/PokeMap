@@ -130,51 +130,61 @@ module.exports = {
       },
       {
         name: 'pallet town',
+        flavortext: 'Shades of Your Journey Await!',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'viridian city',
+        flavortext: 'The City of Evergreen',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'pewter city',
+        flavortext: 'Between Rugged Mountains',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'cerulean city',
+        flavortext: 'The Floral Lagoon City',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'vermilion city',
+        flavortext: 'The Port of Exquisite Sunsets',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'lavender town',
+        flavortext: 'The Noble Town',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'celadon city',
+        flavortext: 'City of Rainbow Dreams',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'fuchsia city',
+        flavortext:'Happening and Passing City',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'saffron city',
+        flavortext: 'Shining Big City',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         name: 'cinnabar island',
+        flavortext: 'The Ravaged Town of the Past',
         createdAt: new Date(),
         updatedAt: new Date()
       },

@@ -861,12 +861,7 @@ async function palletTown() {
           {name: 'charizard'},
           {name: 'squirtle'},
           {name: 'wartortle'},
-          {name: 'blastoise'},
-          {name: 'magikarp'},
-          {name: 'poliwag'},
-          {name: 'goldeen'},
-          {name: 'tentacool'},
-          {name: 'staryu'}
+          {name: 'blastoise'}
         ]
       }
     })

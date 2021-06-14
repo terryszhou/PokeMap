@@ -19,29 +19,7 @@
             </tr>
             <tr>
                 <td>
-                    <% if (oneplace.dataValues.name == 'pallet town') { %>
-                        <h5 class="italic">"Shades of Your Journey Await!"</h5>
-                    <% } else if (oneplace.dataValues.name == 'viridian city') { %>
-                        <h5 class="italic">"The City of Evergreen"</h5>
-                    <% } else if (oneplace.dataValues.name == 'pewter city') { %>
-                        <h5 class="italic">"Between Rugged Mountains"</h5>
-                    <% } else if (oneplace.dataValues.name == 'cerulean city') { %>
-                        <h5 class="italic">"The Floral Lagoon City"</h5>
-                    <% } else if (oneplace.dataValues.name == 'vermilion city') { %>
-                        <h5 class="italic">"The Port of Exquisite Sunsets"</h5>
-                    <% } else if (oneplace.dataValues.name == 'lavender town') { %>
-                        <h5 class="italic">"The Noble Town"</h5>
-                    <% } else if (oneplace.dataValues.name == 'celadon city') { %>
-                        <h5 class="italic">"City of Rainbow Dreams"</h5>
-                    <% } else if (oneplace.dataValues.name == 'fuchsia city') { %>
-                        <h5 class="italic">"Happening and Passing City"</h5>
-                    <% } else if (oneplace.dataValues.name == 'saffron city') { %>
-                        <h5 class="italic">"Shining Big City"</h5>
-                    <% } else if (oneplace.dataValues.name == 'cinnabar island') { %>
-                        <h5 class="italic">"The Ravaged Town of the Past"</h5>
-                    <% } else if (oneplace.dataValues.name == 'special event') { %>
-                        <h5 class="italic">"WHO'S THAT POKEMON?!"</h5>
-                    <% } %>
+                    <h5 class="italic">"<%= oneplace.dataValues.flavortext %>"</h5>
                     <img class="place-img" src="img/place-img/<%= oneplace.dataValues.id %>.png">
                 </td>
             </tr>
@@ -76,17 +54,6 @@
 
 </main>
 <script>
-    // let placeImgArray = []
-    // let placeImg = document.querySelectorAll('.place-img')
-    // placeImgArray.push(placeImg)
-
-    // placeImgArray[0].forEach(place => {
-    //     if (place.width > place.height) {
-    //         place.style.width = "70%"
-    //     } else if (place.height > place.width) {
-    //         place.style.width = "40%"
-    //     }
-    // })
     
 </script>
 
