@@ -104,16 +104,12 @@ router.get('/:name', async (req, res) => {
     })
 
     let moveData = []
+    
     for await (e of sortedMoves) {
       moveData.push(await axios.get(e.move.url))
     }
-    moveData.forEach(move => {
-      log(move.data.name)
-    })
 
-    // log(moveData)
-
-    res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves})
+    res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves, moveData:moveData})
 
   } catch(err) {
     log(err)

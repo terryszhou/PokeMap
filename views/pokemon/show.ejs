@@ -260,25 +260,49 @@
     <table class="data-table">
         <tbody>
             <tr>
-                <td class="data-text" colspan="3">
+                <td class="data-text" colspan="6">
                     Moves
                 </td>
             </tr>
             <tr>
                 <td class="data-text">Move Name</td>
-                <td class="data-text">Level Learned</td>
-                <td class="data-text">Learn Method</td>
+                <td class="data-text">Type</td>
+                <td class="data-text">Cat.</td>
+                <td class="data-text">Power</td>
+                <td class="data-text">Accuracy</td>
+                <td class="data-text">PP</td>
             </tr>
-            <% sortedMoves.forEach((e) => { %>
+            <% moveData.forEach((e) => { %>
                 <tr>
                     <td class="a">
-                        <%= e.move.name.replace(/-/g, ' ') %>
+                        <%= e.data.name.replace(/-/g, ' ') %>
                     </td>
                     <td>
-                        <%= (' ' + e.version_group_details[0].level_learned_at).replace(/ 0/g, '--') %>
+                        <img class="type-img" src="https://www.serebii.net/attackdex-bw/type/<%= e.data.type.name %>.gif"/>
                     </td>
                     <td class="a">
-                        <%= e.version_group_details[0].move_learn_method.name.replace(/-/g, ' ') %>
+                        <% if (e.data.damage_class.name == 'physical') { %>
+                            <img src="https://www.serebii.net/pokedex-bw/type/physical.png"/>
+                        <% } else if (e.data.damage_class.name == 'special') { %>
+                            <img src="https://www.serebii.net/pokedex-bw/type/special.png"/>
+                        <% } else if (e.data.damage_class.name == 'status') { %>
+                            <img src="https://www.serebii.net/pokedex-bw/type/other.png"/>
+                        <% } %>
+                    </td>
+                    <td>
+                        <%= e.data.power %>
+                        <% if (e.data.power == null) { %>
+                            --
+                        <% } %>
+                    </td>
+                    <td>
+                        <%= e.data.accuracy %>
+                        <% if (e.data.accuracy == null) { %>
+                            --
+                        <% } %>
+                    </td>
+                    <td>
+                        <%= e.data.pp %>
                     </td>
                 </tr>
             <% }) %>
