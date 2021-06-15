@@ -47,6 +47,18 @@ app.get('/:id', (req, res) => {
   })
 })
 
+app.get("/move/:name", (req, res) => {
+  let name = req.params.name
+  axios.get(`https://pokeapi.co/api/v2/move/${name}`)
+  .then(resFromAPI => {
+    let moveData = resFromAPI.data
+    res.render("move.ejs", {moveData:moveData})
+  })
+  .catch(err => {
+    log(err)
+  })
+})
+
 // LISTEN TO PORT -------------------
 app.listen(port, () => {
   log('...listening on', port );
