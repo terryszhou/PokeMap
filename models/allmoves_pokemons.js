@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class pokemon extends Model {
+  class allmoves_pokemons extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,16 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.pokemon.belongsToMany(models.allmove, {through:'allmoves_pokemons'})
     }
   };
-  pokemon.init({
-    name: DataTypes.STRING,
-    dexnum: DataTypes.INTEGER,
-    nickname: DataTypes.STRING
+  allmoves_pokemons.init({
+    pokemonId: DataTypes.INTEGER,
+    moveId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'pokemon',
+    modelName: 'allmoves_pokemons',
   });
-  return pokemon;
+  return allmoves_pokemons;
 };
