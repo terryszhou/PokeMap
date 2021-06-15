@@ -1,1 +1,59 @@
-<h1>Hello</h1>
+<div class="container my-container" id="nickname-container">
+    <h3 class="text-center a">
+        <%= moveData.name.replace(/-/g, ' ') %>
+    </h3>
+    <table class="data-table">
+        <tbody>
+            <tr>
+                <td class="data-text" colspan="5">
+                    Move Data
+                </td>
+            </tr>
+            <tr>
+                <td class="data-text">
+                    Type
+                </td>
+                <td class="data-text">
+                    Category
+                </td>
+                <td class="data-text">
+                    Power
+                </td>
+                <td class="data-text">
+                    Accuracy
+                </td>
+                <td class="data-text">
+                    PP
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="type-img" src="https://www.serebii.net/attackdex-bw/type/<%= moveData.type.name %>.gif"/>
+                </td>
+                <td>
+                    <% if (moveData.damage_class.name == 'physical') { %>
+                        <img src="https://www.serebii.net/pokedex-bw/type/physical.png"/>
+                    <% } else if (moveData.damage_class.name == 'special') { %>
+                        <img src="https://www.serebii.net/pokedex-bw/type/special.png"/>
+                    <% } else if (moveData.damage_class.name == 'status') { %>
+                        <img src="https://www.serebii.net/pokedex-bw/type/other.png"/>
+                    <% } %>
+                </td>
+                <td>
+                    <%= moveData.power %>
+                </td>
+                <td>
+                    <%= moveData.accuracy %>
+                </td>
+                <td>
+                    <%= moveData.pp %>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <%= moveData.flavor_text_entries[2].flavor_text %>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
