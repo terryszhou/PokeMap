@@ -1,4 +1,9 @@
-<div class="container my-container" id="nickname-container">
+<div class="container my-container">
+    <p>
+        <form class="back-button" action="/pokemon">
+            <button class="btn btn-primary" type="submit">See Party</button>
+        </form>
+    </p>
     <h3 class="text-center a">
         <%= moveData.name.replace(/-/g, ' ') %>
     </h3>
@@ -41,9 +46,15 @@
                 </td>
                 <td>
                     <%= moveData.power %>
+                    <% if (moveData.power == null) { %>
+                        --
+                    <% } %>
                 </td>
                 <td>
                     <%= moveData.accuracy %>
+                    <% if (moveData.accuracy == null) { %>
+                        --
+                    <% } %>
                 </td>
                 <td>
                     <%= moveData.pp %>
@@ -54,6 +65,82 @@
                     <%= moveData.flavor_text_entries[2].flavor_text %>
                 </td>
             </tr>
+            <tr>
+                <td class="data-text">
+                    Target
+                </td>
+                <td class="data-text">
+                    Stat Change
+                </td>
+                <td class="data-text">
+                    Crit Rate
+                </td>
+                <td class="data-text">
+                    Drain
+                </td>
+                <td class="data-text">
+                    Healing
+                </td>
+            <tr>
+                <td class="a">
+                    <%= moveData.target.name.replace(/-/g, ' ') %>
+                </td>
+                <td class="a">
+                    <% if (moveData.stat_changes.length !== 0) { %>
+                        <% moveData.stat_changes.forEach(e => { %>
+                            <% if (e.change > 0) { %>
+                                <p>
+                                    <%= e.stat.name.replace(/-/g, ' ') %> + <%= e.change %>
+                                </p>
+                            <% } else { %>
+                            <p>
+                                <%= e.stat.name.replace(/-/g, ' ') %> <%= e.change %>
+                            </p>
+                            <% } %>
+                        <% }) %>
+                    <% } else { %>
+                        --
+                    <% } %>
+                </td>
+                <td>
+                    <%= moveData.meta.crit_rate %>
+                </td>
+                <td>
+                    <%= moveData.meta.drain %>
+                    <% if (moveData.meta.drain !== 0) { %>
+                        %
+                    <% } %>
+                </td>
+                <td>
+                    <%= moveData.meta.healing %>
+                    <% if (moveData.meta.healing !== 0) { %>
+                        %
+                    <% } %>
+                </td>
+            </tr>
         </tbody>
     </table>
+
+    <table class="data-table">
+        <tbody>
+            <tr>
+                <td class="data-text">
+                    Learned By Pokémon 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="poke-box">
+        <% moveData.learned_by_pokemon.forEach(e => { %>
+            <% if (parseInt(e.url.substr(34, 4).replace('/', ' ')) <= 151 ) { %>
+                <div class="well a">
+                    <span class="gold-text">
+                        #<%= e.url.substr(34, 4).replace('/', ' ') %>
+                    </span> 
+                    <%= e.name %>
+                </div>
+            <% } %>
+        <% }) %>
+    </div>
 </div>
