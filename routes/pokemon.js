@@ -103,14 +103,11 @@ router.get('/:name', async (req, res) => {
       return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
     })
 
-    let moveData = []
-    
-    for await (e of sortedMoves) {
-      moveData.push(await axios.get(e.move.url))
-    }
-
-    res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves, moveData:moveData})
-
+    res.render('pokemon/show.ejs', {
+      pokeDataOne:pokeDataOne, 
+      pokeDataTwo:pokeDataTwo, 
+      sortedMoves:sortedMoves
+    })
   } catch(err) {
     log(err)
   }
@@ -121,6 +118,12 @@ router.get('/:name', async (req, res) => {
 module.exports = router;
 
 // SCRAP CODE
+
+// ATTEMPTED LAYERED API CALL - WORKS, BUT IS SLOW
+// let moveData = []
+// for await (e of sortedMoves) {
+//   moveData.push(await axios.get(e.move.url))
+// }
 
 // ATTEMPTED LAYERED API CALL - RETURNS 'TypeError: [] is not a function'
 // const moveData = []

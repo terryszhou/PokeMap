@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   allmove.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'allmove',
