@@ -91,22 +91,29 @@ router.delete('/', (req, res) => {
 // GET /pokemon/:name - renders a show.ejs page with info about pokemon
 router.get('/:name', async (req, res) => {
   try {
-  let name = req.params.name
+    let name = req.params.name
+    let one = `https://pokeapi.co/api/v2/pokemon/${name}`
+    let two = `https://pokeapi.co/api/v2/pokemon-species/${name}`
+    const responseOne = await axios.get(one)
+    const responseTwo = await axios.get(two)
+    let pokeDataOne = responseOne.data
+    let pokeDataTwo = responseTwo.data
 
-  let one = `https://pokeapi.co/api/v2/pokemon/${name}`
-  let two = `https://pokeapi.co/api/v2/pokemon-species/${name}`
+    let sortedMoves = pokeDataOne.moves.sort((a, b) => {
+      return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
+    })
 
-  const responseOne = await axios.get(one)
-  const responseTwo = await axios.get(two)
+    let moveData = []
+    for await (e of sortedMoves) {
+      moveData.push(await axios.get(e.move.url))
+    }
+    moveData.forEach(move => {
+      log(move.data.name)
+    })
 
-  let pokeDataOne = responseOne.data
-  let pokeDataTwo = responseTwo.data
+    // log(moveData)
 
-  let sortedMoves = pokeDataOne.moves.sort((a, b) => {
-    return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
-  })
-
-  res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves})
+    res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves})
 
   } catch(err) {
     log(err)
@@ -119,7 +126,46 @@ module.exports = router;
 
 // SCRAP CODE
 
-// .THEN FORMAT FOR GET/SHOW FUNCTION
+// ATTEMPTED LAYERED API CALL - RETURNS 'TypeError: [] is not a function'
+// const moveData = []
+
+// (async function() {
+//   try {
+//     for await (e of sortedMoves) {
+//       moveData.push(axios.get(e.move.url))
+//     }
+//   } catch (err) {
+//     log(err)
+//   }
+// })();
+
+// log(moveData)
+
+// ATTEMPTED LAYERED MOVE API CALL -- RETURNS ARRAY OF UNDEFINED
+// const moveData = await sortedMoves.map(e => {
+//   axios.get(e.move.url)
+// })
+
+// ATTEMPTED LAYERED MOVE API CALL -- RETURNS PENDING PROMISES
+// let moveData = []
+
+// for await(e of sortedMoves) {
+//   moveData.push(axios.get(e.move.url))
+// }
+// log(moveData)
+
+// ATTEMPTED LAYERED MOVE API CALL - RETURNS ARRAY OF UNDEFINED
+// let moveData = sortedMoves.map(e => {
+//   axios.get(e.move.url)
+//   .then(moves => {
+//     return moves.data
+//   })
+//   .catch(err => {
+//     log(err)
+//   })
+// })
+
+// .THEN FORMAT FOR GET/SHOW ROUTE - FUNCTIONAL, BUT OVERLY COMPLICATED
 // router.get('/:name', (req, res) => {
 //   let name = req.params.name
 
@@ -150,13 +196,3 @@ module.exports = router;
 //   })
 // })
 
-// ATTEMPTED LAYERED MOVE API CALL
-// let moveData = sortedMoves.map(e => {
-//   axios.get(e.move.url)
-//   .then(moves => {
-//     return moves.data
-//   })
-//   .catch(err => {
-//     log(err)
-//   })
-// })
