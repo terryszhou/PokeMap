@@ -89,42 +89,69 @@ router.delete('/', (req, res) => {
 })
 
 // GET /pokemon/:name - renders a show.ejs page with info about pokemon
-router.get('/:name', (req, res) => {
+router.get('/:name', async (req, res) => {
+  try {
   let name = req.params.name
 
   let one = `https://pokeapi.co/api/v2/pokemon/${name}`
   let two = `https://pokeapi.co/api/v2/pokemon-species/${name}`
 
-  const requestOne = axios.get(one)
-  const requestTwo = axios.get(two)
+  const responseOne = await axios.get(one)
+  const responseTwo = await axios.get(two)
 
-  axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
+  let pokeDataOne = responseOne.data
+  let pokeDataTwo = responseTwo.data
 
-    const responseOne = responses[0]
-    const responseTwo = responses[1]
-
-    let pokeDataOne = responseOne.data
-    let pokeDataTwo = responseTwo.data
-
-    let sortedMoves = pokeDataOne.moves.sort((a, b) => {
-      return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
-    })
-
-    res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves})
-    })
-  )
-  .catch(err => {
-    log(err)
+  let sortedMoves = pokeDataOne.moves.sort((a, b) => {
+    return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
   })
+
+  res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves})
+
+  } catch(err) {
+    log(err)
+  }
 })
+
 
 // EXPORT ROUTER
 module.exports = router;
 
 // SCRAP CODE
 
-// ATTEMPTED LAYERED API CALL
-// let moveData = sortedMoves.forEach(e => {
+// .THEN FORMAT FOR GET/SHOW FUNCTION
+// router.get('/:name', (req, res) => {
+//   let name = req.params.name
+
+//   let one = `https://pokeapi.co/api/v2/pokemon/${name}`
+//   let two = `https://pokeapi.co/api/v2/pokemon-species/${name}`
+
+//   const requestOne = axios.get(one)
+//   const requestTwo = axios.get(two)
+
+//   axios.all([requestOne, requestTwo])
+//   .then(axios.spread((...responses) => {
+
+//     const responseOne = responses[0]
+//     const responseTwo = responses[1]
+
+//     let pokeDataOne = responseOne.data
+//     let pokeDataTwo = responseTwo.data
+
+//     let sortedMoves = pokeDataOne.moves.sort((a, b) => {
+//       return a.version_group_details[0].level_learned_at - b.version_group_details[0].level_learned_at
+//     })
+
+//     res.render('pokemon/show.ejs', {pokeDataOne:pokeDataOne, pokeDataTwo:pokeDataTwo, sortedMoves:sortedMoves})
+//     })
+//   )
+//   .catch(err => {
+//     log(err)
+//   })
+// })
+
+// ATTEMPTED LAYERED MOVE API CALL
+// let moveData = sortedMoves.map(e => {
 //   axios.get(e.move.url)
 //   .then(moves => {
 //     return moves.data

@@ -34,7 +34,7 @@ For an extended Pokedex, here are the features I would like to implement:
 
 [] Multiple 'tabs' within the home.ejs page featuring more generations of pokemon.
 
-[] A functioning Move List for each pokemon on their show.ejs page, complete with names, level/learning method, type, damage, and in-game description.
+[\] A functioning Move List for each pokemon on their show.ejs page, complete with names, level/learning method, type, damage, and in-game description.
 
 [] Redirect the 'favourites' button to open up a side menu containing the user's party. This would help streamline the user experience, allowing the user to explore routes and add pokemon to their party WITHOUT leaving the map screen.
 
