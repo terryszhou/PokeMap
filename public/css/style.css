@@ -552,3 +552,11 @@ li {
 .gold-text {
     color: gold;
 }
+
+a {
+    color: rgb(82,122,61);
+}
+
+a:hover {
+    color: rgb(62,102,41);
+}

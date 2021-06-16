@@ -7,6 +7,8 @@
     <h3 class="text-center a">
         <%= moveData.name.replace(/-/g, ' ') %>
     </h3>
+
+<%# ------------- MOVE DATA TABLE ------------- %>
     <table class="data-table">
         <tbody>
             <tr>
@@ -93,9 +95,9 @@
                                     <%= e.stat.name.replace(/-/g, ' ') %> + <%= e.change %>
                                 </p>
                             <% } else { %>
-                            <p>
-                                <%= e.stat.name.replace(/-/g, ' ') %> <%= e.change %>
-                            </p>
+                                <p>
+                                    <%= e.stat.name.replace(/-/g, ' ') %> <%= e.change %>
+                                </p>
                             <% } %>
                         <% }) %>
                     <% } else { %>
@@ -120,7 +122,8 @@
             </tr>
         </tbody>
     </table>
-
+    
+<%# ------------- LEARNED BY POKEMON TABLE ------------- %>
     <table class="data-table">
         <tbody>
             <tr>
@@ -133,12 +136,15 @@
     
     <div class="poke-box">
         <% moveData.learned_by_pokemon.forEach(e => { %>
-            <% if (parseInt(e.url.substr(34, 4).replace('/', ' ')) <= 151 ) { %>
+            <% if (parseInt(e.url.substr(34, 4).replace('/', '')) <= 151 ) { %>
                 <div class="well a">
-                    <span class="gold-text">
-                        #<%= e.url.substr(34, 4).replace('/', ' ') %>
-                    </span> 
-                    <%= e.name %>
+                    <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= e.url.substr(34, 4).replace('/', '') %>.png">
+                    <h4>
+                        <span class="gold-text">
+                            #<%= e.url.substr(34, 4).replace('/', '') %>
+                        </span> 
+                        <%= e.name %>
+                    </h4>
                 </div>
             <% } %>
         <% }) %>

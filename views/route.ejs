@@ -4,7 +4,7 @@
     <h5 class="italic gold-text"><%= oneplace.dataValues.kanji %></h5>
     <p>
         <form class="text-center" action="/">
-          <button class="btn btn-primary" type="submit">Back to Map</button>
+            <button class="btn btn-primary" type="submit">Back to Map</button>
         </form>
     </p>
 
@@ -26,42 +26,29 @@
     </table>
 
 <%# ------------- POKEMON LIST ------------- %>
-<table class="data-table">
-    <tbody>
-        <tr>
-            <td class="data-text">
-                Pokémon
-            </td>
-        </tr>
-    </tbody>
-</table>
+    <table class="data-table">
+        <tbody>
+            <tr>
+                <td class="data-text">
+                    Pokémon
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-<div class="poke-box">
-    <% placeMons.forEach(mon => { %>
-        <div class="well">
-            <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= mon.id %>.png">
-            <h2 class="a"><span class="gold-text">#<%= mon.id %></span> <%= mon.name %></h2>
-            <form method="POST" action="/pokemon">
-                <input hidden type="text" name="name" value="<%= mon.name %>">
-                <input hidden type="integer" name="dexnum" value="<%= mon.id %>">
-                <button class="btn btn-primary" type="submit">Add to Party</button>
-            </form>
-        </div>
-    <% }) %>
-</div>
-
+    <div class="poke-box">
+        <% placeMons.forEach(mon => { %>
+            <div class="well">
+                <img class="home-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= mon.id %>.png">
+                <h2 class="a"><span class="gold-text">#<%= mon.id %></span> <%= mon.name %></h2>
+                <form method="POST" action="/pokemon">
+                    <input hidden type="text" name="name" value="<%= mon.name %>">
+                    <input hidden type="integer" name="dexnum" value="<%= mon.id %>">
+                    <button class="btn btn-primary" type="submit">Add to Party</button>
+                </form>
+            </div>
+        <% }) %>
+    </div>
 </main>
-<script>
-
-
-
-// let placeImg = document.querySelector(".place-img")
-// if (placeImg.width > placeImg.height) {
-//     placeImg.style.width = '700px';
-// } else if (placeImg.height > placeImg.width) {
-//     placeImg.style.width = '300px';
-// }
-
-</script>
 
 
