@@ -16,7 +16,7 @@ app.use('/pokemon', require('./routes/pokemon'));
 
 // OPT. VARIABLES -------------------
 const log = console.log
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // ROUTES -------------------
 
@@ -62,6 +62,6 @@ app.get("/move/:name", (req, res) => {
 })
 
 // LISTEN TO PORT -------------------
-app.listen(port, () => {
-    log('...listening on', port );
+app.listen(PORT, () => {
+    log('...listening on', PORT );
 });
